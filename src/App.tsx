@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { IconType } from 'react-icons';
+import { IconBaseProps } from 'react-icons/lib';
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -80,19 +82,19 @@ function App() {
                 {/* Social Media Links */}
                 <div className="mt-8 flex justify-end space-x-4">
                   <a href="https://facebook.com" className="text-white hover:text-[#00E6C3] transition-colors">
-                    <FaFacebook size={24} />
+                    {React.createElement(FaFacebook as React.ComponentType<IconBaseProps>, { size: 24 })}
                   </a>
                   <a href="https://linkedin.com" className="text-white hover:text-[#00E6C3] transition-colors">
-                    <FaLinkedin size={24} />
+                    {React.createElement(FaLinkedin as React.ComponentType<IconBaseProps>, { size: 24 })}
                   </a>
                   <a href="https://twitter.com" className="text-white hover:text-[#00E6C3] transition-colors">
-                    <FaTwitter size={24} />
+                    {React.createElement(FaTwitter as React.ComponentType<IconBaseProps>, { size: 24 })}
                   </a>
                   <a href="https://instagram.com" className="text-white hover:text-[#00E6C3] transition-colors">
-                    <FaInstagram size={24} />
+                    {React.createElement(FaInstagram as React.ComponentType<IconBaseProps>, { size: 24 })}
                   </a>
                   <a href="https://youtube.com" className="text-white hover:text-[#00E6C3] transition-colors">
-                    <FaYoutube size={24} />
+                    {React.createElement(FaYoutube as React.ComponentType<IconBaseProps>, { size: 24 })}
                   </a>
                 </div>
 
