@@ -6,19 +6,19 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+          src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1956&q=80"
           alt="Coffee beans background"
         />
-        <div className="absolute inset-0 bg-brown-900 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-brown-900 mix-blend-multiply opacity-60" />
       </div>
       
       <div className="relative">
-        <div className="container mx-auto px-4 py-24 sm:py-32">
+        <div className="container mx-auto px-4 py-16 sm:py-24">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
               Experience the Perfect Cup
             </h1>
-            <p className="mt-6 text-xl text-gray-300">
+            <p className="mt-4 text-lg text-gray-300">
               Discover our carefully selected coffee beans from around the world, expertly roasted to bring out their unique flavors and aromas.
             </p>
             <div className="mt-10">
