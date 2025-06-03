@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { XMarkIcon as XIcon } from '@heroicons/react/24/outline';
+import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import { useCart } from '../context/CartContext';
 import { StorageService, Order } from '../services/storage';
 import toast, { Toaster } from 'react-hot-toast';
@@ -9,7 +10,7 @@ const DEMO_USER_ID = 'demo-user-123';
 const storageService = StorageService.getInstance();
 
 const Cart = ({ onClose }: { onClose: () => void }) => {
-  const { items, removeFromCart, updateQuantity, totalPrice, isLoading, clearCart } = useCart();
+  const { items, removeFromCart, updateQuantity, totalPrice, isLoading, clearCart, downloadReceipt } = useCart();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [currentOrder, setCurrentOrder] = useState<Order | null>(null);
 
@@ -130,24 +131,33 @@ const Cart = ({ onClose }: { onClose: () => void }) => {
                   ${totalPrice.toFixed(2)}
                 </span>
               </div>
-              <button
-                className={`w-full py-3 rounded-lg font-medium transition-colors ${
-                  isCheckingOut
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-[#00E6C3] hover:bg-[#00c4a5] text-white'
-                }`}
-                onClick={handleCheckout}
-                disabled={isCheckingOut}
-              >
-                {isCheckingOut ? (
-                  <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Processing...
-                  </div>
-                ) : (
-                  'Proceed to Checkout'
-                )}
-              </button>
+              <div className="space-y-3">
+                <button
+                  className={`w-full py-3 rounded-lg font-medium transition-colors ${
+                    isCheckingOut
+                      ? 'bg-gray-400 cursor-not-allowed'
+                      : 'bg-[#00E6C3] hover:bg-[#00c4a5] text-white'
+                  }`}
+                  onClick={handleCheckout}
+                  disabled={isCheckingOut}
+                >
+                  {isCheckingOut ? (
+                    <div className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Processing...
+                    </div>
+                  ) : (
+                    'Proceed to Checkout'
+                  )}
+                </button>
+                <button
+                  onClick={downloadReceipt}
+                  className="w-full py-3 rounded-lg font-medium bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors flex items-center justify-center space-x-2"
+                >
+                  <ArrowDownTrayIcon className="h-5 w-5" />
+                  <span>Download Receipt</span>
+                </button>
+              </div>
             </div>
           )}
         </div>
