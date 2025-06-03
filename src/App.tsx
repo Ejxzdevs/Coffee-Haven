@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { IconType } from 'react-icons';
 import { IconBaseProps } from 'react-icons/lib';
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Navbar from './components/Navbar';
