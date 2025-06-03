@@ -118,14 +118,13 @@ coffee-haven/
 │   └── assets/            # Images and other assets
 ├── src/
 │   ├── components/        # Reusable UI components
-│   ├── context/          # React Context providers
-│   ├── pages/            # Page components
-│   ├── services/         # Business logic
-│   ├── styles/           # Global styles
-│   ├── types/            # TypeScript type definitions
-│   ├── utils/            # Utility functions
-│   └── App.tsx          # Main application component
-└── package.json         # Project dependencies and scripts
+│   ├── context/           # React Context providers
+│   ├── pages/             # Page components
+│   ├── services/          # Business logic
+│   ├── App.tsx           # Main application component
+│   ├── index.tsx         # Application entry point
+│   └── index.css         # Global styles
+└── package.json          # Project dependencies and scripts
 ```
 
 ---
