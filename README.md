@@ -6,7 +6,7 @@
 ---
 
 ## Project Design Highlight
-![Coffee Haven Overview](./image.png)
+![Coffee Haven Overview](image.png)
 
 ---
 
